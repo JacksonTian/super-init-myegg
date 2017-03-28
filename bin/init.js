@@ -65,7 +65,8 @@ run
 logs
 `);
 
-init.dir('app/view');
+const viewDir = join('../app/view');
+init.dir('app/view', viewDir);
 
 const bootstrapDir = join('../public/bootstrap-3.3.7');
 init.dir('app/public/bootstrap-3.3.7', bootstrapDir);
