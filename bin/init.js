@@ -53,7 +53,7 @@ node_modules
 init.dir('app/view');
 
 const bootstrapDir = path.join(__dirname, '../public/bootstrap-3.3.7');
-init.dir('public/bootstrap-3.3.7', bootstrapDir);
+init.dir('app/public/bootstrap-3.3.7', bootstrapDir);
 
 init.exec('cnpm i egg@1 --save');
 init.exec('cnpm i egg-bin --save-dev');
