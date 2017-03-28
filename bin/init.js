@@ -6,6 +6,10 @@ const SuperInit = require('superinit');
 
 const init = new SuperInit();
 
+function join(...args) {
+  return path.join(__dirname, ...args);
+}
+
 init.snippet('package.json', `{
   "name": "{{请输入应用名： }}",
   "scripts": {
@@ -14,12 +18,16 @@ init.snippet('package.json', `{
 }`);
 
 init.snippet('app/controller/home.js', `
+'use strict';
+
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
-      this.ctx.body = 'Hello world';
+      const locals = {username: 'Jackson Tian'};
+      this.ctx.body = yield this.ctx.renderView('index.html', locals);
     }
   }
+
   return HomeController;
 };`);
 
@@ -46,14 +54,23 @@ exports.view = {
   }
 };`, 'append');
 
+init.snippet('config/config.default.js', `
+exports.ejs = {
+  layout: 'layout.html'
+};`, 'append');
+
 init.snippet('.gitignore', `
 node_modules
+run
+logs
 `);
 
 init.dir('app/view');
 
-const bootstrapDir = path.join(__dirname, '../public/bootstrap-3.3.7');
+const bootstrapDir = join('../public/bootstrap-3.3.7');
 init.dir('app/public/bootstrap-3.3.7', bootstrapDir);
+const jQueryFile = join('../public/jquery-3.2.0.min.js');
+init.file('app/public/jquery-3.2.0.min.js', jQueryFile);
 
 init.exec('cnpm i egg@1 --save');
 init.exec('cnpm i egg-bin --save-dev');
