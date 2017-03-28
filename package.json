@@ -1,0 +1,18 @@
+{
+  "name": "superinit-bootstrapx",
+  "version": "1.0.0",
+  "description": "SuperInit for bootstrap toolkit",
+  "main": "bin/init.js",
+  "bin": {
+    "bootstrapx-init": "init.js"
+  },
+  "dependencies": {
+    "superinit": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jackson Tian",
+  "license": "MIT"
+}
