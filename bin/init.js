@@ -1,8 +1,10 @@
+#!/usr/bin/env node
+
 'use strict';
 
 const path = require('path');
 
-const SuperInit = require('superinit');
+const SuperInit = require('super-init');
 
 const init = new SuperInit();
 
