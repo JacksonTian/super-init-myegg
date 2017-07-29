@@ -4,7 +4,7 @@
   "description": "SuperInit for egg/bootstrap/ejs",
   "main": "bin/init.js",
   "bin": {
-    "init-myegg": "init.js"
+    "init-myegg": "bin/init.js"
   },
   "dependencies": {
     "super-init": "^1.0.0"
