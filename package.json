@@ -1,13 +1,13 @@
 {
-  "name": "super-init-bootstrap",
+  "name": "super-init-myegg",
   "version": "1.0.0",
-  "description": "SuperInit for bootstrap toolkit",
+  "description": "SuperInit for egg/bootstrap/ejs",
   "main": "bin/init.js",
   "bin": {
-    "bootstrapx-init": "init.js"
+    "init-myegg": "init.js"
   },
   "dependencies": {
-    "superinit": "^1.0.0"
+    "super-init": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
