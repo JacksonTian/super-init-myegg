@@ -1,5 +1,5 @@
 {
-  "name": "superinit-bootstrapx",
+  "name": "super-init-bootstrap",
   "version": "1.0.0",
   "description": "SuperInit for bootstrap toolkit",
   "main": "bin/init.js",
